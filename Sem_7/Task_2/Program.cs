@@ -4,9 +4,9 @@ int[,] array = new int[4, 5];
 Random rnd = new Random();
 
 Console.WriteLine("Изначальный массив: ");
-for (int i = 0; i < 4; i++)
+for (int i = 0; i < array.GetLength(0); i++)
 {
-    for (int j = 0; j < 5; j++)
+    for (int j = 0; j < array.GetLength(1); j++)
     {
         array[i, j] = rnd.Next(1, 9);
         Console.Write("\t" + array[i, j]);
@@ -15,9 +15,9 @@ for (int i = 0; i < 4; i++)
 }
 
 Console.WriteLine("Преобразованный массив: ");
-for (int i = 0; i < 4; i++)
+for (int i = 0; i < array.GetLength(0); i++)
 {
-    for (int j = 0; j < 5; j++)
+    for (int j = 0; j < array.GetLength(1); j++)
     {
         if (i % 2 == 0 && j % 2 == 0)
         {

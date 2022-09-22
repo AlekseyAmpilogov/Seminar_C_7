@@ -1,17 +1,17 @@
-﻿Console.Write("Введите строку: ");
+﻿Console.Write("Введите строку искомого элемента: ");
 int position1 = Convert.ToInt32(Console.ReadLine()) - 1;
-Console.Write("Введите столбец: ");
+Console.Write("Введите столбец искомого элемента: ");
 int position2 = Convert.ToInt32(Console.ReadLine()) - 1;
 int strsCount = 5; 
 int columnsCount = 7;
-Random random = new Random();
+Random rnd = new Random();
 int[,] array = new int[strsCount, columnsCount];
 Console.WriteLine("\nСлучайный массив:");
 for (int i = 0; i < array.GetLength(0); i++)
 {
     for (int j = 0; j < array.GetLength(1); j++)
     {
-        array[i, j] = random.Next(10, 99);
+        array[i, j] = rnd.Next(-99, 99);
         Console.Write("{0} ", array[i, j]);
     }
     Console.WriteLine();
